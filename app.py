@@ -75,3 +75,13 @@ if st.button("Analisar consumo"):
         st.write("💡 Troque lâmpadas por LED.")
     if horas_ocioso > 3:
         st.write("🔌 Desligue aparelhos sem uso.")
+        
+import matplotlib.pyplot as plt
+
+labels = ['Água', 'Energia']
+valores = [agua_total, energia_total]
+
+fig, ax = plt.subplots()
+ax.bar(labels, valores)
+
+st.pyplot(fig)        
